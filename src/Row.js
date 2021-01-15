@@ -1,5 +1,8 @@
 import React ,{useState,useEffect} from 'react'
 import axios from './axios'
+
+const base_url = "https://image.tmdb.org/t/p/original"
+
 const Row = ({title , fetchUrl}) => {
     const [movies , SetMovies ] = useState([])
  // IF [] RUN ONCE WHEN THE ROW LOADS, AND DON'T RUN AGAIN
