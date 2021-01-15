@@ -4,7 +4,7 @@ import './Row.css'
 
 const base_url = "https://image.tmdb.org/t/p/original"
 
-const Row = ({title , fetchUrl}) => {
+const Row = ({title , fetchUrl ,isLargeRow}) => {
     const [movies , SetMovies ] = useState([])
  // IF [] RUN ONCE WHEN THE ROW LOADS, AND DON'T RUN AGAIN
     useEffect( ()=> {
