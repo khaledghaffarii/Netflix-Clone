@@ -21,12 +21,16 @@ fetchData()
     return (
         <div className="row">
             <h2> {title} </h2>
-                <div className="row_posters">
+                <div className="row__posters">
                    {/* row__poster */}
                    {
                     movies.map(movie =>(
-                        <img src={`${base_url}${movie.poster_path}`} alt= {movie.name} />
-                    ))
+                        <img 
+                        key={movie.id}
+                        className="row__poster"
+                        src={`${base_url}${movie.poster_path}`} 
+                        alt= {movie.name} />
+                       ))
                    }
                 </div>
         </div>
