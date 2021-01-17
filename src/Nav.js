@@ -3,11 +3,15 @@ import React, { useState, useEffect } from 'react';
 import "./Nav.css";
 const Nav = () => {
     const [show, handleshow] = useState(false)
+    const [showButton,handelShowButton] = useState(true)
     useEffect(() => {
         window.addEventListener("scroll", () => {
         if (window.scrollY > 500) {
             handleshow(true)
-        } else handleshow(false);
+            handelShowButton(false)
+        } else{ handleshow(false)
+         handelShowButton(true)
+        };
         });
         return () => {
         window.removeEventListener("scroll")
@@ -22,7 +26,7 @@ const Nav = () => {
         alt="Netflix Logo"
         />
       </a>
-      <a href="#" className="Logout redButton" data-uia="header-login-link">Logout</a>
+      <a href="#" className= {`${showButton && "Logout redButton"}`} data-uia="header-login-link" >Logout</a>
     </div>
     )
 }
