@@ -48,13 +48,18 @@ fetchData()
                    {
                         movies.map(movie =>(
                             <img 
-                            key={movie.id}
-                            className={`row__poster ${isLargeRow && "row__posterLarge"}`}
-                            src={`${base_url}${ isLargeRow ? movie.poster_path : movie.backdrop_path}`} 
-                            alt= {movie.name} />
+                                key={movie.id}
+                                onClick={() => handleClick(movie)}
+                                className={`row__poster ${isLargeRow && "row__posterLarge"}`}
+                                src={`${base_url}${ isLargeRow ? movie.poster_path : movie.backdrop_path}`} 
+                                alt= {movie.name} 
+                            />
                         ))
                    }
                 </div>
+                  <div style={{ padding: "40px" }}>
+                     {trailerUrl && <YouTube videoId={trailerUrl} opts={opts}/>}
+                  </div>
         </div>
     )
 }
