@@ -19,6 +19,26 @@ const Row = ({title , fetchUrl ,isLargeRow}) => {
 fetchData()
 
  },[fetchUrl]);
+  
+ const opts = {
+    height: "390",
+    width: "100%",
+    playerVars: {
+      autoplay: 1,
+    }
+  }
+ const handleClick = (movie) => {
+    // console.table(movie?.title)
+    if (trailerUrl) {
+      setTrailerUrl('')
+    } else {
+      movieTrailer( movie?.title || "")
+        .then(url => {
+          const urlParams = new URLSearchParams(new URL(url).search);
+          setTrailerUrl(urlParams.get('v'));
+        }).catch((error) => console.log(error));
+    }
+  }
  console.table(movies)
     return (
         <div className="row">
