@@ -11,7 +11,27 @@
   transition: all 0.5s;
 
 }
+.Logout.redButton{
+  margin-right: 3em;
+      background-color: #e50914;
+    line-height: normal;
+    padding: 7px 25px;
+    font-weight: 400;
+    font-size: 1rem;
+    float: right;
+}
+a {
+    text-decoration: none;
+        cursor: pointer;
 
+}
+.Logout{
+  color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-top: .5rem;
+}
 .nav_black {
   background-color: #111;
   opacity: 0.9;
