@@ -1,3 +1,9 @@
+# Netflix-Clone with ReactJS      
+
+![ReactJS Resume Website Netflix-clone](Netflix.png?raw=true "ReactJS Resume Website Template")
+
+## <a href="https://netflix-clone-2b64c.web.app" target="_blank">LIVE DEMO</a>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
