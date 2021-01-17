@@ -1,11 +1,13 @@
 import React ,{useState,useEffect} from 'react'
 import axios from './axios';
 import './Row.css'
-
+import YouTube from 'react-youtube';
+import movieTrailer from 'movie-trailer';
 const base_url = "https://image.tmdb.org/t/p/original"
 
 const Row = ({title , fetchUrl ,isLargeRow}) => {
     const [movies , SetMovies ] = useState([])
+      const [trailerUrl, setTrailerUrl] = useState("");
  // IF [] RUN ONCE WHEN THE ROW LOADS, AND DON'T RUN AGAIN
     useEffect( ()=> {
    async function fetchData(){
